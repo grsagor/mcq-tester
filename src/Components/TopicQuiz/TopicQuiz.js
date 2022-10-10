@@ -7,13 +7,15 @@ const TopicQuiz = () => {
     const { questions} = topics;
     console.log(topics);
     return (
-        <div>
-            {
-                questions.map(question => <Question
-                    key={question.id}
-                    question = {question}
-                ></Question>)
-            }
+        <div className='flex justify-center items-center'>
+            <div className='w-3/4'>
+                {
+                    questions.map(question => <Question
+                        key={question.id}
+                        question = {question}
+                    ></Question>)
+                }
+            </div>
         </div>
     );
 };
