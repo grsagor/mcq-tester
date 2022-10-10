@@ -6,7 +6,7 @@ import './Topics.css'
 const Topics = () => {
     const Topics = useLoaderData().data;
     return (
-        <div>
+        <div className='flex'>
             {
                 Topics.map(topic => <Topic
                     key={topic.id}
