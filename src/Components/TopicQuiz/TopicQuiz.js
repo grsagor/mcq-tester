@@ -7,8 +7,7 @@ const TopicQuiz = () => {
     const { questions} = topics;
     console.log(topics);
     return (
-        <div className='flex justify-center items-center'>
-            <div className='w-3/4'>
+            <div className='w-3/4 mx-auto'>
                 {
                     questions.map(question => <Question
                         key={question.id}
@@ -16,7 +15,6 @@ const TopicQuiz = () => {
                     ></Question>)
                 }
             </div>
-        </div>
     );
 };
 
