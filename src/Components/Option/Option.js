@@ -7,7 +7,7 @@ const Option = ({option}) => {
 //             <label for={option}>{option}</label><br></br>
 //         </div>
 
-<label class="radio-inline p-4 m-4 border border-indigo-600">
+<label class="font-semibold radio-inline p-4 m-4 border border-lime-600">
 <input type="radio" name="optradio"/>{option}
 </label>
     );
