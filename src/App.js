@@ -10,7 +10,10 @@ function App() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Main></Main>,
+      element: <div>
+
+        <Main></Main>
+      </div>,
       children: [
         {
           path: 'topics',
@@ -18,6 +21,17 @@ function App() {
             return fetch('https://openapi.programming-hero.com/api/quiz');
           },
           element: <Topics></Topics>
+        },
+        {
+          path: '/',
+          loader: () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz');
+          },
+          element: <div>
+            <div className='w-3/4 mx-auto'>
+              <h1 className='font-bold text-2xl mb-2 border border-lime-600'>Welcome to <span className='text-lime-600'>MCQ Tester</span></h1>
+            </div>
+            <Topics></Topics></div>
         },
         {
           path: 'statistics',
@@ -29,7 +43,7 @@ function App() {
         },
         {
           path: '/topic/:TopicID',
-          loader: async ({params}) => {
+          loader: async ({ params }) => {
             return fetch(`https://openapi.programming-hero.com/api/quiz/${params.TopicID}`);
           },
           element: <TopicQuiz></TopicQuiz>
