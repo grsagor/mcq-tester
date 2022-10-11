@@ -5,7 +5,6 @@ import Question from '../Question/Question';
 const TopicQuiz = () => {
     const topics = useLoaderData().data;
     const { questions} = topics;
-    console.log(topics);
     return (
             <div className='w-3/4 mx-auto'>
                 {

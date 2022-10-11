@@ -2,7 +2,8 @@ import React from 'react';
 import Option from '../Option/Option';
 
 const Question = ({question}) => {
-    const options = question.options;
+    const {options, correctAnswer} = question;
+
     return (
         <div className='border-2 my-2 bg-lime-200 rounded'>
             <p className='my-4 mx-2 border-2 border-lime-600 p-4 text-xl font-bold'>{question.question}</p>
@@ -10,6 +11,7 @@ const Question = ({question}) => {
             {
                 options.map(option => <Option
                     option = {option}
+                    correctAnswer = {correctAnswer}
                 ></Option>)
             }
             </form>
