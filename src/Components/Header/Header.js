@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 
 const Header = () => {
+    const [open, setOpen] = useState(false);
     return (
         // <div>
         //     <Link to='/topics'>Topics</Link>
@@ -14,11 +16,16 @@ const Header = () => {
                     <h2 className='bg-white text-lime-600 px-12 py-2 text-2xl font-bold'>Title</h2>
                 </div>
                 <div>
-                    <ul className='flex'>
-                        <li className='mr-4 border-2 p-1'><Link to='/topics'>Topics</Link></li>
-                        <li className='mr-4 border-2 p-1'><Link to='/statistics'>Statistics</Link></li>
-                        <li className='mr-4 border-2 p-1'><Link to='/blogs'>Blogs</Link></li>
+                    <ul className={`md:flex absolute md:static duration-500 ${open ? 'top-[80px] right-5 bg-lime-600	' : 'top-[-200px]'}`}>
+                        <li><Link to='/topics'><button className='my-2 md:mx-2 px-3 md:border-2 md:p-1'>Topics</button></Link></li>
+                        <li><Link to='/statistics'><button className='my-2 md:mx-2 px-3 md:border-2 md:p-1'>Statistics</button></Link></li>
+                        <li><Link to='/blogs'><button className='my-2 md:mx-2 px-3 md:border-2 md:p-1'>Blogs</button></Link></li>
                     </ul>
+                    <div onClick={() => setOpen(!open)} className="h-6 w-6 text-white md:hidden">
+                        {
+                            open ? <XMarkIcon/> : <Bars3Icon/>
+                        }
+                    </div>
                 </div>
             </div>
         </nav>
