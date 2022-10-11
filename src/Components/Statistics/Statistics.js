@@ -9,7 +9,7 @@ const Statistics = () => {
     console.log();
     return (
         <div>
-            <div className='border-4 text-xl text-lime-600 font-bold border-lime-600 mb-4 p-6 w-3/4 mx-auto'>This Barchart is based on total number of questions of every topics.</div>
+            <div className='border-4 text-xl text-lime-600 font-bold border-lime-600 mb-4 p-6 w-3/4 mx-auto'>This Barchart is based on the total number of questions of every topics.</div>
             <div className='flex justify-center'>
                 <ResponsiveContainer width="75%" height={400}>
             <BarChart
