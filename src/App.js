@@ -27,9 +27,11 @@ function App() {
           loader: () => {
             return fetch('https://openapi.programming-hero.com/api/quiz');
           },
-          element: <div>
-            <div className='w-3/4 mx-auto'>
-              <h1 className='font-bold text-2xl mb-2 border border-lime-600'>Welcome to <span className='text-lime-600'>MCQ Tester</span></h1>
+          element: <div className='mb-12'>
+            <div className='w-3/4 mx-auto p-12 my-20 md:p-40 shadow-2xl shadow-black welcome-message'>
+              <h1 className='font-bold text-white text-2xl mb-2 shadow-2xl shadow-white'>Welcome to <span className='text-lime-600'>MCQ Tester, </span>
+              Do you worried about your IQ on programming objects? You have come to the perfect place. Now, test your IQ on any programming language from our website. Best of Luck!
+              </h1>
             </div>
             <Topics></Topics></div>
         },
