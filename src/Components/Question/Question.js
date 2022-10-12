@@ -14,7 +14,7 @@ const Question = ({ question }) => {
     return (
         <div className='border-2 my-2 bg-lime-200 rounded'>
             <div className='my-4 mx-2 border-2 border-lime-600 p-4 text-xl font-bold flex justify-between'>
-                <div>{question.question.replace(/<p>/, "").replace(/<\/p>/, "")}</div>
+                <div>{question.question}</div>
                 <div onClick={clickedOnEyeButton}>
                     <EyeSlashIcon className="h-6 w-6 text-lime-600" />
                 </div>
